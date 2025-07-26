@@ -252,8 +252,8 @@ export function logError(error: AppError, context?: string) {
   const logData = {
     ...error,
     context,
-    userAgent: navigator.userAgent,
-    url: window.location.href
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'test-environment',
+    url: typeof window !== 'undefined' ? window.location.href : 'test-environment'
   }
 
   if (import.meta.env.DEV) {

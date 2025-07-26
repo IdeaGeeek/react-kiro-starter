@@ -176,3 +176,4 @@ firebase-debug.log
 *.tar.gz
 .cache/
 .vite/
+.kiro/settings/mcp.json
